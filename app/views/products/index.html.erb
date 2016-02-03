@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>  <!-- @products is an instance variable array object -->
+      <div class="col-sm-2 col-md-4">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+        <h4><%= product.name %></h4>            <!-- product.name is an array member object method field of the @product array object -->
+        <%= product.description %>
+        <p>This bike comes with a free upgraded <%= product.color %> paint job!</p>
+        <!-- create the price column next -->
+        <% price = "$"  + product.price.to_i.to_s %>
+        <strong><%= price %></strong>
+      </div> <!-- end column -->
+    <% end %>
+  </div> <!-- end row -->
+</div> <!-- end container -->
+
+<br>
+
+<!-- <%= link_to 'New Product', new_product_path %> -->
+
+
+
