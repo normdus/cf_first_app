@@ -1,9 +1,21 @@
-    <div class="col-sm-2 col-md-4">
+
+    <div class="col-md-4">
       <%= image_tag(product.image_url, class: "img-responsive") %>
-      <h4><%= product.name %></h4>            <!-- product.name is an array member object method field of the @product array object -->
+      <h4 class="text-center">
+        <%= product.name %>
+      </h4>            <!-- product.name is an array member object method field of the @product array object -->
       <%= product.description %>
-      <p>This bike comes with a free upgraded <%= product.color %> paint job!</p>
-      <!-- create the price column next -->
+      <p>
+        This bike comes with a free upgraded <%= product.color %> paint job!
+      </p>
       <% price = "$"  + product.price.to_i.to_s %>
-      <strong><%= price %></strong>
-    </div> <!-- end column -->
+      <h5 class="text-center">
+        <%= price %>
+      </h5>
+      <div class="text-center">
+        <%= link_to 'Show',     product %>
+        <%= link_to 'Edit',     edit_product_path(product) %>
+        <%= link_to 'Destroy',  product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div> 
+   

@@ -1,3 +1,27 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.product-crud-links {
+    margin: 0 auto;
+}
+
+a:link {
+    text-decoration: none;
+    color: blue;
+    margin: 0 auto;
+}
+
+a:visited {
+    text-decoration: none;
+    color: cyan;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: hotpink;
+}
+
+a:active {
+    text-decoration: underline;
+    color: red;
+}
