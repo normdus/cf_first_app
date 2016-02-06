@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
 # 5.1 routes change root
-# root 'static_pages#landing_page'
-  root 'static_pages#index'
+ root 'static_pages#landing_page'
+#  root 'static_pages#index'
  
   resources :products
   
