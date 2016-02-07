@@ -1,11 +1,41 @@
-<div class="row">
-<div class"well col-md-12">
-  <h1>Contact</h1>
-  <h3>Norman Duchene</h3>
-  <p>17A Sunnyside Lane</p>
-  <p>Derry NH, 03038</p>
+<div class="container-fluid anchor" id="contact"><!-- Contact Page -->
+  <div class="row">
+    <div class="contact column col-md-4">
+      <div class"well col-md_offset-2 col-md-8">
+        <!-- image_tag was here -->
+        <h1>Contact</h1>
+        <span class="text-center">
+        Norman Duchene<br>
+        17A Sunnyside Lane<br>
+        Derry NH, 03038<br>
+        </span>
+      </div>
+    </div>
+  </div>
   
-  <%= image_tag("1200-custom.jpg", class: "center-block img-responsive") %>
-  <%= link_to '5.1 link_to  Edit',     edit_product_path(6) %>
-</div>
+  <%= flash[:notice] %>
+  
+  <div class=" col-md-offset-3 col-md-8">
+    <%= form_tag("/static_pages/thank_you") do %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= label_tag :name, "Name" %>
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :email, "Email Address" %>
+          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :message, "Message" %>
+          <%= text_field_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+        </div>
+        
+        </div>
+      </div>
+    </div> <!-- end row  -->
+    <%= submit_tag "Send" %>
+    <% end %>
+  </div>
 </div>

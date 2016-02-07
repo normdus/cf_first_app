@@ -1,6 +1,14 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-
+  # Sendgrid Plugin for email setup ....
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :authentication => :plain,
+    :user_name => ENV['rails@careerfoundry.nduchene.info'],
+    :password => ENV['norm3488'],
+    :domain => 'heroku.com',
+    :enable_starttls_auto => true
+  }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
