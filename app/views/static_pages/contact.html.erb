@@ -15,7 +15,7 @@
   
   <%= flash[:notice] %>
   
-  <div class=" col-md-offset-3 col-md-8">
+ 
     <%= form_tag("/static_pages/thank_you") do %>
     <div class="row">
       <div class="col-md-4">
@@ -31,11 +31,9 @@
           <%= label_tag :message, "Message" %>
           <%= text_field_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
         </div>
+        <%= submit_tag "Send" %>
         
-        </div>
       </div>
     </div> <!-- end row  -->
-    <%= submit_tag "Send" %>
     <% end %>
-  </div>
 </div>

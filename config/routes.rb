@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
   
-  post 'static_pages/thank_you'
+  # match '/send_mail', to: 'contact#send_mail', via: 'post'
+  
+ post 'static_pages/thank_you'
 
 end

@@ -1,6 +1,19 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  # POST contact email
+  def thank_you
+    @name = params[:name]
+    @email = params[:email]
+    @message = params[:message]
+    ActionMailer::Base.mail(:from => @email,
+      :to => 'norman.duchene@comcast.net',
+      :subject => "A new contact form message from #{@name}",
+      :body => @message).deliver_now
+  end
+
+
+
   # GET /products
   # GET /products.json
   def index
